@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+  display: grid;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+
+
+.img {
+    max-width: 60%;
+    min-width: 59%;
+
+}
+
+.text {
+
+  h2 {
+    margin: auto 0 auto 0;
+  }
+
+  .info-div > h2 {
+    margin: auto 0.5em auto 0.5em;
+  }
+
+  .bed {
+      padding-top: .3em;
+      padding-left: .8em;
+  }
+
+  .titulo,
+  .info,
+  .info-div {
+    display: flex;
+  }
+
+  .colonia,
+  .ubicacion {
+    font-weight: 400;
+  }
+
+  padding: 3em 5em 3em 3em;
+  min-width: 36em;
+
+  .colonia,
+  .ubicacion,
+  .precio,
+  .info {
+    margin-left: 2.4em;
+  }
+
+  .titulo,
+  .colonia,
+  .ubicacion,
+  .precio {
+    margin-bottom: 1em;
+  }
+
+  .map{
+      padding-top: .2em;
+      margin-right: 1em;
+  }
+}
+
+.text, .img {
+  // box shadow https://www.cssmatic.com/box-shadow
+  -webkit-box-shadow: 0px 4px 3px 0px rgba(217, 217, 217, 1);
+  -moz-box-shadow: 0px 4px 3px 0px rgba(217, 217, 217, 1);
+  box-shadow: 0px 4px 3px 0px rgba(217, 217, 217, 1);
+
+  // https://www.cssmatic.com/border-radius
+  border-radius: 14px 14px 14px 14px;
+  -webkit-border-radius: 14px 14px 14px 14px;
+  border: 0px solid #000000;
+}
+
+
+// buton
+
+$anim-text-offset: 1em;
+
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button{
+  touch-callout: none;
+  user-select: none;
+  display: inline-block;
+  border: .2em solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.6;
+  color: black;
+  &__text{
+    display: block;
+    padding:1em 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:before{
+      content: attr(title);
+    }
+    &--bis{
+      display: block;
+      position: absolute;
+      top: 0; left:0; right: 0; bottom: 0;
+      transform: translateX(-1 * $anim-text-offset);
+      opacity: 0;
+    }
+  }
+  &__mask{
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: black;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s;
+  }  
+}
+
+.button:hover{
+  opacity: 1;
+  .button__text{
+    animation: fx-text .3s ease-out;
+    &--bis{
+      animation: fx-text-bis .3s ease-out;
+    }
+  }    
+  .button__mask{
+    animation: fx-mask .3s ease-out;
+  }    
+}
+
+.button:active{
+  opacity: 1;
+  background: black;
+  color: inherit;
+}
+
+
+
+@keyframes fx-mask {
+  0%{
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100%{
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes fx-text {
+  0%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX($anim-text-offset);
+    opacity: 0;
+  }
+}
+@keyframes fx-text-bis {
+  0%{
+    transform: translateX(-1 * $anim-text-offset);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

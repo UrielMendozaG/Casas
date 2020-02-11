@@ -1,4 +1,5 @@
 // voy a pasar el array que me mandaron a codigo js
+// las url de las casas fueron cambiadas ya que me daban 404.
 
 const data = [
   {
@@ -17,7 +18,7 @@ const data = [
     longitud: -103.44696044922,
     precio: 6400000,
     totalimagenes: 49,
-    imagen: "https://img-18.ecadoo.com/1/2019/10/29/20748885-thumb-0.jpg"
+    imagen: "https://www.casasparaconstruir.com/projetos/149/01.jpg"
   },
   {
     id: 33498174,
@@ -35,7 +36,7 @@ const data = [
     longitud: 0,
     precio: 5400000,
     totalimagenes: 22,
-    imagen: "https://img-10.ecadoo.com/1/2019/10/30/20967848-thumb-0.jpg"
+    imagen: "https://d3te2s0dmhk13a.cloudfront.net/1555958856090_-1006168462.jpg"
   },
   {
     id: 19733423,
@@ -53,7 +54,7 @@ const data = [
     longitud: -103.46838378906,
     precio: 5790000,
     totalimagenes: 49,
-    imagen: "https://img-4.ecadoo.com/1/2019/10/30/20773757-thumb-0.jpg"
+    imagen: "https://www.casasparaconstruir.com/projetos/140/01.jpg"
   },
   {
     id: 32921132,
@@ -71,7 +72,7 @@ const data = [
     longitud: -103.451171875,
     precio: 5900000,
     totalimagenes: 17,
-    imagen: "https://img-3.ecadoo.com/1/2019/10/29/20556858-thumb-0.jpg"
+    imagen: "https://www.casasparaconstruir.com/projetos/115/01.jpg"
   },
   {
     id: 32932611,
@@ -89,7 +90,7 @@ const data = [
     longitud: -103.47736358643,
     precio: 5750000,
     totalimagenes: 14,
-    imagen: "https://img-16.ecadoo.com/1/2019/10/29/20571934-thumb-0.jpg"
+    imagen: "https://i.ebayimg.com/images/g/cg4AAOSwIuldaU2t/s-l400.jpg"
   },
   {
     id: 32958462,
@@ -107,7 +108,7 @@ const data = [
     longitud: -103.47689819336,
     precio: 6450000,
     totalimagenes: 21,
-    imagen: "https://img-4.ecadoo.com/1/2019/10/29/20605752-thumb-0.jpg"
+    imagen: "https://i.pinimg.com/originals/4e/b2/1f/4eb21f506eafb382eaea2b6d87fd3cea.jpg"
   },
   {
     id: 33360407,
@@ -125,7 +126,7 @@ const data = [
     longitud: -103.47828674316,
     precio: 6300000,
     totalimagenes: 28,
-    imagen: "https://img-18.ecadoo.com/1/2019/10/30/20918726-thumb-0.jpg"
+    imagen: "https://www.sadasi.com/SadasiR2/wp-content/uploads/2018/11/casa-modelo-encino-paseos-del-bosque-2-tecamac-estado-de-mexico.jpg"
   },
   {
     id: 32958829,
@@ -143,7 +144,7 @@ const data = [
     longitud: -103.44690704346,
     precio: 6100000,
     totalimagenes: 27,
-    imagen: "https://img-17.ecadoo.com/1/2019/10/29/20604951-thumb-0.jpg"
+    imagen: "https://d3te2s0dmhk13a.cloudfront.net/32765/873913210.jpg"
   },
   {
     id: 33269605,
@@ -161,7 +162,7 @@ const data = [
     longitud: -103.44690704346,
     precio: 6169000,
     totalimagenes: 17,
-    imagen: "https://img-8.ecadoo.com/1/2019/10/30/20867195-thumb-0.jpg"
+    imagen: "https://www.sadasi.com/SadasiR2/wp-content/uploads/2018/11/casa-modelo-izamal-los-heroes-merida-merida-yucatan.jpg"
   },
   {
     id: 33299409,
@@ -179,7 +180,7 @@ const data = [
     longitud: -103.44472503662,
     precio: 6500000,
     totalimagenes: 10,
-    imagen: "https://img-19.ecadoo.com/1/2019/10/30/20920644-thumb-0.jpg"
+    imagen: "https://www.sadasi.com/SadasiR2/wp-content/uploads/2018/11/casa-modelo-uxmal-los-heroes-merida-merida-yucatan.jpg"
   },
   {
     id: 33420502,
@@ -197,7 +198,7 @@ const data = [
     longitud: -103.45279693604,
     precio: 5450000,
     totalimagenes: 29,
-    imagen: "https://img-3.ecadoo.com/1/2019/10/30/20893248-thumb-0.jpg"
+    imagen: "https://www.casasparaconstruir.com/projetos/149/01.jpg"
   },
   {
     id: 28887040,
@@ -215,7 +216,7 @@ const data = [
     longitud: 0,
     precio: 5940000,
     totalimagenes: 7,
-    imagen: "https://img-1.ecadoo.com/1/2019/11/06/22106399-thumb-0.jpg"
+    imagen: "https://d3te2s0dmhk13a.cloudfront.net/1555958856090_-1006168462.jpg"
   },
   {
     id: 30458170,
@@ -233,7 +234,7 @@ const data = [
     longitud: -103.44690704346,
     precio: 5990000,
     totalimagenes: 19,
-    imagen: "https://img-6.ecadoo.com/1/2019/10/25/18767472-thumb-0.jpg"
+    imagen: "https://www.casasparaconstruir.com/projetos/140/01.jpg"
   },
   {
     id: 20345973,
@@ -252,7 +253,7 @@ const data = [
     precio: 5950000,
     totalimagenes: 15,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/08/11/5528971-thumb-0.jpg"
+      "https://i.ebayimg.com/images/g/cg4AAOSwIuldaU2t/s-l400.jpg"
   },
   {
     id: 26826035,
@@ -271,7 +272,7 @@ const data = [
     precio: 5400000,
     totalimagenes: 22,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/09/28/13060709-180.jpg"
+      "https://i.pinimg.com/originals/4e/b2/1f/4eb21f506eafb382eaea2b6d87fd3cea.jpg"
   },
   {
     id: 27079372,
@@ -290,7 +291,7 @@ const data = [
     precio: 6300000,
     totalimagenes: 28,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/09/29/13152283-180.jpg"
+      "https://www.casasparaconstruir.com/projetos/115/01.jpg"
   },
   {
     id: 20311392,
@@ -309,7 +310,7 @@ const data = [
     precio: 5650000,
     totalimagenes: 15,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/08/09/5507303-thumb-0.jpg"
+      "https://www.sadasi.com/SadasiR2/wp-content/uploads/2018/11/casa-modelo-encino-paseos-del-bosque-2-tecamac-estado-de-mexico.jpg"
   },
   {
     id: 20317418,
@@ -328,7 +329,7 @@ const data = [
     precio: 6490000,
     totalimagenes: 19,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/08/09/5511559-thumb-0.jpg"
+      "https://d3te2s0dmhk13a.cloudfront.net/32765/873913210.jpg"
   },
   {
     id: 20326002,
@@ -347,7 +348,7 @@ const data = [
     precio: 6500000,
     totalimagenes: 14,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/08/09/5516414-thumb-0.jpg"
+      "https://www.sadasi.com/SadasiR2/wp-content/uploads/2018/11/casa-modelo-izamal-los-heroes-merida-merida-yucatan.jpg"
   },
   {
     id: 20409916,
@@ -366,7 +367,7 @@ const data = [
     precio: 6300000,
     totalimagenes: 29,
     imagen:
-      "https://storage.googleapis.com/mx_pics.ecadoo.com/1/2019/08/13/5556105-thumb-0.jpg"
+      "https://d3te2s0dmhk13a.cloudfront.net/1555958856090_-1006168462.jpg"
   }
 ];
 

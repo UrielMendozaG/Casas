@@ -5,10 +5,12 @@ var updateData = new Event("updateData");
 let position = 0;
 
 export default function ParseText(num) {
-
   const getPosition = num => {
-    // este codigo verifica que nunca sea menor que 0 
-    if (position == 0 && Math.sign(num) == -1) {
+    // Nunca sea menor que 0 ni mayor que la longitud del array
+    if (
+      (position == 0 && Math.sign(num) == -1) ||
+      (position == Data.length - 1 && Math.sign(num) == 1)
+    ) {
       position += 0;
     } else {
       position += num;
@@ -27,7 +29,24 @@ export default function ParseText(num) {
 
     titulo = Data[position].titulo;
 
-    let index = titulo.indexOf("n") + 2;
+    let index = 0;
+
+    // Arregla el titulo de cada casa
+
+    if (titulo.length >= 50) {
+      let index = titulo.indexOf(".") + 1;
+      titulo = titulo.slice(0, index);
+    } else if (titulo.length >= 46) {
+      let index = titulo.indexOf("c");
+      titulo = titulo
+        .slice(index, titulo.length)
+        .replace("condominio", "Condominio");
+    } else if (titulo.length >= 41) {
+      titulo = titulo;
+    } else {
+      let index = titulo.indexOf("n") + 2;
+      titulo = titulo.slice(index, titulo.length);
+    }
 
     titulo = titulo.substring(index, titulo.length);
 
@@ -52,6 +71,7 @@ export default function ParseText(num) {
     precio.splice(5, 0, ",");
 
     dataParsed.push("$ " + precio.join(""));
+
     // recamaras
     dataParsed.push(Data[position].recamaras);
     // baños
@@ -59,11 +79,12 @@ export default function ParseText(num) {
     // mt2
     dataParsed.push(Data[position].m2t);
 
-    //data updated
-    window.dispatchEvent(updateData);
+    // img url
 
-    console.log(position);
-    
+    dataParsed.push(Data[position].imagen)
+
+    //data updated
+
     return dataParsed;
   };
 
