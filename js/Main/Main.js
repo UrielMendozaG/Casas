@@ -9,3 +9,6 @@ UpdateData()
 
 Butons()
 
+console.log(window.innerHeight, "h") //750 h
+console.log(window.innerWidth, "w") // 1534 w
+

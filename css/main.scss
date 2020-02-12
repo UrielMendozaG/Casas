@@ -13,16 +13,12 @@
   align-items: center;
 }
 
-
-
 .img {
-    max-width: 60%;
-    min-width: 59%;
-
+  max-width: 60%;
+  min-width: 59%;
 }
 
 .text {
-
   h2 {
     margin: auto 0 auto 0;
   }
@@ -32,8 +28,8 @@
   }
 
   .bed {
-      padding-top: .3em;
-      padding-left: .8em;
+    padding-top: 0.3em;
+    padding-left: 0.8em;
   }
 
   .titulo,
@@ -64,13 +60,14 @@
     margin-bottom: 1em;
   }
 
-  .map{
-      padding-top: .2em;
-      margin-right: 1em;
+  .map {
+    padding-top: 0.2em;
+    margin-right: 1em;
   }
 }
 
-.text, .img {
+.text,
+.img {
   // box shadow https://www.cssmatic.com/box-shadow
   -webkit-box-shadow: 0px 4px 3px 0px rgba(217, 217, 217, 1);
   -moz-box-shadow: 0px 4px 3px 0px rgba(217, 217, 217, 1);
@@ -82,13 +79,30 @@
   border: 0px solid #000000;
 }
 
+// responsive
 
-// buton
+@media (max-width: 1690px) {
+  .text {
+    min-width: 22em;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1233px) {
+  .text {
+    max-width: 50%;
+  }
+
+  .img {
+    min-width: 70%;
+  }
+}
+
+// buton styles
 
 $anim-text-offset: 1em;
 
-
-.wrapper{
+.wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -96,89 +110,162 @@ $anim-text-offset: 1em;
   align-items: center;
   justify-content: center;
 }
-.button{
+.button {
   touch-callout: none;
   user-select: none;
   display: inline-block;
-  border: .2em solid;
+  border: 0.2em solid;
   position: relative;
   cursor: pointer;
   overflow: hidden;
   opacity: 0.6;
   color: black;
-  &__text{
+  &__text {
     display: block;
-    padding:1em 2em;
+    padding: 1em 2em;
     text-transform: uppercase;
     font-weight: bold;
-    &:before{
+    &:before {
       content: attr(title);
     }
-    &--bis{
+    &--bis {
       display: block;
       position: absolute;
-      top: 0; left:0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       transform: translateX(-1 * $anim-text-offset);
       opacity: 0;
     }
   }
-  &__mask{
+  &__mask {
     display: block;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: black;
     transform: translateX(-100%) rotate(45deg);
     transition: all 0.3s;
-  }  
+  }
 }
 
-.button:hover{
+.button:hover {
   opacity: 1;
-  .button__text{
-    animation: fx-text .3s ease-out;
-    &--bis{
-      animation: fx-text-bis .3s ease-out;
+  .button__text {
+    animation: fx-text 0.3s ease-out;
+    &--bis {
+      animation: fx-text-bis 0.3s ease-out;
     }
-  }    
-  .button__mask{
-    animation: fx-mask .3s ease-out;
-  }    
+  }
+  .button__mask {
+    animation: fx-mask 0.3s ease-out;
+  }
 }
 
-.button:active{
+.button:active {
   opacity: 1;
   background: black;
   color: inherit;
 }
 
-
-
 @keyframes fx-mask {
-  0%{
+  0% {
     transform: translateX(-100%) rotate(45deg);
   }
-  100%{
+  100% {
     transform: translateX(100%) rotate(45deg);
   }
 }
 
 @keyframes fx-text {
-  0%{
+  0% {
     transform: translateX(0);
     opacity: 1;
   }
-  100%{
+  100% {
     transform: translateX($anim-text-offset);
     opacity: 0;
   }
 }
 @keyframes fx-text-bis {
-  0%{
+  0% {
     transform: translateX(-1 * $anim-text-offset);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
+@media (max-width: 609px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img {
+    grid-row-start: 1;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(-2em);
+    z-index: -1;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    transform: translateY(-4em);
+    z-index: 1;
+    height: 34em;
+    background-color: white;
+
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border: 0px solid #000000;
+
+    //shadow
+
+    -webkit-box-shadow: -200px -200px 5px -200px rgba(247, 247, 247, 0);
+    -moz-box-shadow: -200px -200px 5px -200px rgba(247, 247, 247, 0);
+    box-shadow: -200px -200px 5px -200px rgba(247, 247, 247, 0);
+  }
+
+  .titulo {
+    margin-top: 2em;
+  }
+
+  #back {
+    position: absolute;
+    z-index: 2;
+    transform: translateY(17em);
+  }
+
+  #next {
+    position: absolute;
+    z-index: 2;
+    transform: translateY(12em);
+  }
+}
+
+@media screen and (min-height: 711px) and (max-width: 500px) {
+  .text {
+    transform: translateY(-8em);
+  }
+}
+
+ @media (min-height: 736px) and (max-width: 500px) {
+   .text {
+     transform: translateY(-6em);
+   }
+ }
+
+ @media (min-height: 800px) and (max-width: 500px) {
+   .text {
+     transform: translateY(-10em);
+   }
+ }

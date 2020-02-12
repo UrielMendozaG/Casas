@@ -1,7 +1,5 @@
 import Data from "../Data/Data.js";
 
-var updateData = new Event("updateData");
-
 let position = 0;
 
 export default function ParseText(num) {
